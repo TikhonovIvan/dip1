@@ -7,12 +7,14 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./css/main.css --watch"
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@tailwindcss/cli": "^4.0.3",
     "tailwindcss": "^4.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10"
   }
 }
