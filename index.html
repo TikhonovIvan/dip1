@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -13,11 +12,11 @@
     <title>Document</title>
 </head>
 <body class="bg-neutral-800  text-white font-family">
-<header class="bg-neutral-800">
-    <div class="flex px-5 items-center justify-between py-6 text-yellow-500">
-        <a href=""><span class="text-2xl  ">Coffee -&- Home</span></a>
-        <nav>
-            <ul class="flex items-center gap-x-8 uppercase  ">
+<header class="bg-neutral-800 fixed top-0 inset-x-0 z-10 sm:static">
+    <div class="flex px-5 items-center justify-between text-yellow-500 py-3 sм:py-6">
+        <a href="#"><span class="text-xl sm:text-2xl ">Coffee -&- Home</span></a>
+        <nav class="hidden lg:block">
+            <ul class="flex items-center gap-x-4 lg:gap-x-8 uppercase  ">
                 <li><a href="#" class="font-bold hover:text-yellow-50">Меню</a></li>
                 <li><a href="#" class="font-bold hover:text-yellow-50">О нас</a></li>
                 <li><a href="#" class="font-bold hover:text-yellow-50">Галерея</a></li>
@@ -25,454 +24,502 @@
             </ul>
         </nav>
 
-        <div class="flex items-center gap-x-6">
-            <a href="#" class="text-yellow-50 uppercase font-semibold px-3 py-2 border
+        <div class="items-center gap-x-6  hidden sm:flex ">
+            <a href="#" class="text-yellow-50 uppercase text-xs md:text-base font-semibold px-2 py-2 md:px-3 md:py-2 border
             border-yellow-500 rounded-3xl bg-yellow-500 hover:bg-yellow-400 hover:border-yellow-400  ">Заказать
                 столик</a>
-            <a href="#" class="uppercase font-semibold px-5 py-2 border
+            <a href="#" class="uppercase font-semibold text-xs md:text-base px-3 md:px-5 py-2 border
             border-yellow-500 rounded-3xl hover:bg-amber-400 hover:text-white">Кабинет</a>
+        </div>
+
+        <!--Иконка меню-->
+        <div class="flex lg:hidden ">
+            <nav id="nav"
+                 class="absolute inset-x-0 bg-neutral-700 top-13 sm:top-14  border-b-1 hidden target:block peer z-10">
+                <ul class="flex flex-col items-center gap-y-2 px-3 py-2">
+                    <li class="w-full">
+                        <a href="#" class="w-full inline-block font-bold text-center">Меню</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class="w-full inline-block font-bold text-center">О нас</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class="w-full inline-block font-bold text-center">Галерея</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class="w-full inline-block font-bold text-center">Контакты</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class=" w-full inline-block text-yellow-50 uppercase text-center text-xs  font-semibold px-2 py-2 border
+                                        border-yellow-500 rounded-3xl bg-yellow-500   ">Заказать
+                            столик</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#" class="w-full inline-block uppercase text-center font-semibold text-xs py-2 border
+                            border-yellow-500 rounded-3xl">Кабинет</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Кнопка открыть меню -->
+            <a href="#nav" class="peer-target:hidden peer-target:[&+a]:block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                          d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <!--Кнопка закрыть меню -->
+            <a href="" class="hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+
         </div>
     </div>
 </header>
 
 <main>
-    <section
-            class="h-screen relative bg-[url('../img/hero_bg.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-x-hidden overflow-y-hidden">
-        <div class="absolute top-1/2 -right-30 transform -translate-y-1/2 ">
-            <img src="./img/rectangle.png" alt="Rectangle">
+    <section class="h-screen relative bg-[url('../img/hero_bg.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center overflow-x-hidden overflow-y-hidden">
+        <div class="absolute top-1/2 -right-30 transform -translate-y-1/2  w-1/2  hidden sm:block ">
+            <img src="./img/rectangle.png" alt="Rectangle" >
         </div>
 
-        <div class="container ml-50 flex flex-col items-start justify-start text-center">
-            <div>
-                <h2 class=" text-[40px] text-yellow-500 font-[Tinos] -mb-9"> Добро пожаловать в </h2>
-                <h1 class=" text-[90px] text-yellow-500 font-[Tinos]">
+        <div class="container ml-0 flex flex-col sm:items-start  justify-start text-center  ">
+            <div class="">
+                <h2 class="text-[35px] sm:text-[40px] text-yellow-500 font-[Tinos] mb-1 sm:-mb-5 "> Добро пожаловать в </h2>
+                <h1 class="text-[50px] sm:text-[60px] md:text-[90px] text-yellow-500 font-[Tinos]">
                     Наше кафе
                 </h1>
                 <div class="flex items-center justify-center gap-4 text-center ">
-                    <span class="relative before:content-[''] before:block before:w-[61px] before:h-[2px] before:bg-white"></span>
-                    <span class="text-lg font-semibold uppercase">Дом лучшей еды</span>
-                    <span class="relative after:content-[''] after:block after:w-[61px] after:h-[2px] after:bg-white"></span>
+                    <span class="relative before:content-[''] before:block before:w-[31px] sm:before:w-[61px] before:h-[2px] before:bg-white"></span>
+                    <span class="text-sm sm:text-lg font-semibold uppercase">Дом лучшей еды</span>
+                    <span class="relative after:content-[''] after:block after:w-[31px]  sm:after:w-[61px] after:h-[2px] after:bg-white"></span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <div class="relative">
-        <div class="container flex justify-around gap-6 absolute top-1/2 left-0 right-0 transform -translate-y-1/2 font-[Tinos]">
-            <article
-                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3  ">
-                <header>
-                    <img src="./img/mask.svg" alt="" class="mx-auto">
-                    <h3 class="text-2xl">Магическая <span class="text-yellow-500">Атмосфера</span></h3>
-                </header>
-                <p class="w-60 text-center text-xl">В нашем заведении царит магическая атмосфера, наполненная вкусными
-                    ароматами</p>
-            </article>
-            <article
-                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3 ">
-                <header>
-                    <img src="./img/mask.svg" alt="" class="mx-auto">
-                    <h3 class="text-2xl ">Лучшее качество <span class="text-yellow-500">Еды</span></h3>
-                </header>
-                <p class="w-60 text-center text-xl">Качество нашей <br> Еды - отменное!</p>
-            </article>
-            <article
-                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3 ">
-                <header>
-                    <img src="./img/mask.svg" alt="" class="mx-auto">
-                    <h3 class="text-2xl">Незабываемый <span class="text-yellow-500">Вкус</span></h3>
-                </header>
-                <p class="w-60 text-center text-xl">Наши повара готовят <br> Удивительно вкусные блюда</p>
-            </article>
-        </div>
-    </div>
+<!--    <div class="relative">-->
+<!--        <div class="container flex justify-around gap-6 absolute top-1/2 left-0 right-0 transform -translate-y-1/2 font-[Tinos]">-->
+<!--            <article-->
+<!--                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3  ">-->
+<!--                <header>-->
+<!--                    <img src="./img/mask.svg" alt="" class="mx-auto">-->
+<!--                    <h3 class="text-2xl">Магическая <span class="text-yellow-500">Атмосфера</span></h3>-->
+<!--                </header>-->
+<!--                <p class="w-60 text-center text-xl">В нашем заведении царит магическая атмосфера, наполненная вкусными-->
+<!--                    ароматами</p>-->
+<!--            </article>-->
+<!--            <article-->
+<!--                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3 ">-->
+<!--                <header>-->
+<!--                    <img src="./img/mask.svg" alt="" class="mx-auto">-->
+<!--                    <h3 class="text-2xl ">Лучшее качество <span class="text-yellow-500">Еды</span></h3>-->
+<!--                </header>-->
+<!--                <p class="w-60 text-center text-xl">Качество нашей <br> Еды - отменное!</p>-->
+<!--            </article>-->
+<!--            <article-->
+<!--                    class="w-[350px] pt-10 pb-5 gap-y-4 bg-neutral-700 flex flex-col items-center transition-transform duration-300 hover:-translate-y-3 ">-->
+<!--                <header>-->
+<!--                    <img src="./img/mask.svg" alt="" class="mx-auto">-->
+<!--                    <h3 class="text-2xl">Незабываемый <span class="text-yellow-500">Вкус</span></h3>-->
+<!--                </header>-->
+<!--                <p class="w-60 text-center text-xl">Наши повара готовят <br> Удивительно вкусные блюда</p>-->
+<!--            </article>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <section class="pb-10">
-        <div class=" container  mt-50 flex  justify-between ">
-            <div class="">
-                <h2 class="text-4xl mt-10 mb-4 text-center">
-                    Наша
-                    <span class="text-yellow-500">История</span>
-                </h2>
-                <p class="w-[450px] text-center text-xl">Как и у любого другого самобытного места, у нас есть своя,
-                    особая
-                    история. Идея ресторана пришла
-                    основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях
-                    километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось на время
-                    обустраивать себе нехитрый быт, добывать и готовить себе еду.</p>
+<!--    <section class="pb-10">-->
+<!--        <div class=" container  mt-50 flex  justify-between ">-->
+<!--            <div class="">-->
+<!--                <h2 class="text-4xl mt-10 mb-4 text-center">-->
+<!--                    Наша-->
+<!--                    <span class="text-yellow-500">История</span>-->
+<!--                </h2>-->
+<!--                <p class="w-[450px] text-center text-xl">Как и у любого другого самобытного места, у нас есть своя,-->
+<!--                    особая-->
+<!--                    история. Идея ресторана пришла-->
+<!--                    основателям неожиданно. Во время прогулки по лесу создатель нашего ресторана застрял в сотнях-->
+<!--                    километров от ближайшего населенного пункта. Вдали от цивилизации и связи им пришлось на время-->
+<!--                    обустраивать себе нехитрый быт, добывать и готовить себе еду.</p>-->
 
-                <div class="mt-20 flex items-center  justify-center gap-10 ">
-                    <div class="flex flex-col gap-2 items-center justify-center">
-                        <h4 class="text-4xl text-yellow-500">
-                            93
-                        </h4>
-                        <p class="text-xl">Напитки</p>
-                    </div>
-                    <div class="flex flex-col gap-2 items-center justify-center">
-                        <h4 class="text-4xl text-yellow-500">
-                            206
-                        </h4>
-                        <p>Еда</p>
-                    </div>
-                    <div class="flex flex-col gap-2 items-center justify-center">
-                        <h4 class="text-4xl text-yellow-500">
-                            71
-                        </h4>
-                        <p>Закуски</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img src="./img/history.png" alt="">
-            </div>
-        </div>
-    </section>
+<!--                <div class="mt-20 flex items-center  justify-center gap-10 ">-->
+<!--                    <div class="flex flex-col gap-2 items-center justify-center">-->
+<!--                        <h4 class="text-4xl text-yellow-500">-->
+<!--                            93-->
+<!--                        </h4>-->
+<!--                        <p class="text-xl">Напитки</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-col gap-2 items-center justify-center">-->
+<!--                        <h4 class="text-4xl text-yellow-500">-->
+<!--                            206-->
+<!--                        </h4>-->
+<!--                        <p>Еда</p>-->
+<!--                    </div>-->
+<!--                    <div class="flex flex-col gap-2 items-center justify-center">-->
+<!--                        <h4 class="text-4xl text-yellow-500">-->
+<!--                            71-->
+<!--                        </h4>-->
+<!--                        <p>Закуски</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <img src="./img/history.png" alt="">-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <section class="relative pt-20 pb-28 bg-[url('../img/bg_02.png')] bg-cover bg-center bg-no-repeat ">
-        <!-- Затемнение -->
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="container  relative flex items-center justify-between ">
-            <div class="w-2/4">
-                <h3 class="text-5xl mb-8 text-yellow-500 font-[Tinos] tracking-wider">
-                    Отпразднуйте в одном из
-                    самых лучших ресторанов.
-                </h3>
+<!--    <section class="relative pt-20 pb-28 bg-[url('../img/bg_02.png')] bg-cover bg-center bg-no-repeat ">-->
+<!--        &lt;!&ndash; Затемнение &ndash;&gt;-->
+<!--        <div class="absolute inset-0 bg-black opacity-70"></div>-->
+<!--        <div class="container  relative flex items-center justify-between ">-->
+<!--            <div class="w-2/4">-->
+<!--                <h3 class="text-5xl mb-8 text-yellow-500 font-[Tinos] tracking-wider">-->
+<!--                    Отпразднуйте в одном из-->
+<!--                    самых лучших ресторанов.-->
+<!--                </h3>-->
 
-                <p class="text-xl font-bold">Только в этом месяце бизнес-ланч от 2000 сом </p>
-            </div>
-            <div>
-                <a href="#"
-                   class="text-white bg-yellow-500 px-4 py-2 rounded-2xl uppercase font-semibold hover:bg-yellow-700 ">Заказ
-                    столик</a>
-            </div>
-        </div>
+<!--                <p class="text-xl font-bold">Только в этом месяце бизнес-ланч от 2000 сом </p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <a href="#"-->
+<!--                   class="text-white bg-yellow-500 px-4 py-2 rounded-2xl uppercase font-semibold hover:bg-yellow-700 ">Заказ-->
+<!--                    столик</a>-->
+<!--            </div>-->
+<!--        </div>-->
 
-    </section>
-
-
-    <section class="pt-20 pb-30 font-[Tinos] bg-[url('../img/menu/menu-bg.png')] bg-cover bg-bottom bg-no-repeat   ] ">
-        <div class="container ">
-            <h2 class="pb-12 text-4xl text-yellow-500 text-center">Блюда</h2>
-
-            <div class="flex justify-between">
-                <div class="grid grid-cols-2 grid-rows-3 gap-3 w-[555px]  h-[1100px] ">
-                    <!-- Первая картинка (верхняя, большая, на 2 колонки) -->
-                    <div class="col-span-2">
-                        <img src="./img/menu/menu-1.png" alt="" class="w-[555px] h-full ">
-                    </div>
-
-                    <!-- Вторая картинка (левая, маленькая) -->
-                    <div class="col-span-1 row-span-1">
-                        <img src="./img/menu/menu-2.png" alt="" class="w-[332px]  h-full ">
-                    </div>
-
-                    <!-- Третья картинка (2 строки, 1 колонка) -->
-                    <div class="col-span-1 row-span-2">
-                        <img src="./img/menu/menu-3.png" alt="" class="w-full h-full ">
-                    </div>
-
-                    <!-- Четвёртая картинка (пересекается с 3 картинкой, но стоит в третьей строке первой колонки) -->
-                    <div class="col-span-1 row-start-3">
-                        <img src="./img/menu/menu-4.png" alt="" class="w-[332px] h-full ">
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-y-18">
-                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">
-                        <!-- Изображение блюда -->
-                        <div class="w-40 h-40 rounded-full overflow-hidden">
-                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Контент (название и описание) -->
-                        <div class="ml-4  flex-1 pr-5">
-                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
-                            <p class="text-md text-gray-300">
-                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
-                            </p>
-                        </div>
-
-                        <!-- Цена -->
-                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
-                            3500
-                        </div>
-                    </div>
-                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">
-                        <!-- Изображение блюда -->
-                        <div class="w-40 h-40 rounded-full overflow-hidden">
-                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Контент (название и описание) -->
-                        <div class="ml-4  flex-1 pr-5">
-                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
-                            <p class="text-md text-gray-300">
-                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
-                            </p>
-                        </div>
-
-                        <!-- Цена -->
-                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
-                            3500
-                        </div>
-                    </div>
-                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">
-                        <!-- Изображение блюда -->
-                        <div class="w-40 h-40 rounded-full overflow-hidden">
-                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Контент (название и описание) -->
-                        <div class="ml-4  flex-1 pr-5">
-                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
-                            <p class="text-md text-gray-300">
-                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
-                            </p>
-                        </div>
-
-                        <!-- Цена -->
-                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
-                            3500
-                        </div>
-                    </div>
-                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">
-                        <!-- Изображение блюда -->
-                        <div class="w-40 h-40 rounded-full overflow-hidden">
-                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Контент (название и описание) -->
-                        <div class="ml-4  flex-1 pr-5">
-                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
-                            <p class="text-md text-gray-300">
-                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
-                            </p>
-                        </div>
-
-                        <!-- Цена -->
-                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
-                            3500
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <a href="#"
-                           class="text-white bg-yellow-500 px-4 py-2 rounded-2xl uppercase font-semibold hover:bg-yellow-700 ">Заказ
-                            столик</a>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
+<!--    </section>-->
 
 
-    <section class="relative bg-[url('../img/bg-slider.png')] bg-cover bg-bottom bg-no-repeat] ">
-        <div class="absolute inset-0 bg-black opacity-70"></div>
-        <div class="w-full relative">
-            <div class="swiper default-carousel swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <div class=" h-96 flex justify-center items-center text-white">
-                            <div class="text-center px-4">
-                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">
-                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание
-                                    отличное,
-                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома
-                                    в Мексике
-                                    я не встречал таких отменных заведений, однозначно рекомендую.
-                                </p>
-                                <div class="flex flex-col items-center ">
-                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">
-                                    <div>
-                                        <p class="text-xl font-semibold">Имя пользователя</p>
-                                        <p class="text-md text-gray-400">Город, страна</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--    <section class="pt-20 pb-30 font-[Tinos] bg-[url('../img/menu/menu-bg.png')] bg-cover bg-bottom bg-no-repeat   ] ">-->
+<!--        <div class="container ">-->
+<!--            <h2 class="pb-12 text-4xl text-yellow-500 text-center">Блюда</h2>-->
 
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <div class=" h-96 flex justify-center items-center text-white">
-                            <div class="text-center px-4 ">
-                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">
-                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание
-                                    отличное,
-                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома
-                                    в Мексике
-                                    я не встречал таких отменных заведений, однозначно рекомендую.
-                                </p>
-                                <div class="flex flex-col items-center ">
-                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">
-                                    <div>
-                                        <p class="text-xl font-semibold">Имя пользователя</p>
-                                        <p class="text-md text-gray-400">Город, страна</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <div class=" h-96 flex justify-center items-center text-white">
-                            <div class="text-center px-4">
-                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">
-                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание
-                                    отличное,
-                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома
-                                    в Мексике
-                                    я не встречал таких отменных заведений, однозначно рекомендую.
-                                </p>
-                                <div class="flex flex-col items-center ">
-                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">
-                                    <div>
-                                        <p class="text-xl font-semibold">Имя пользователя</p>
-                                        <p class="text-md text-gray-400">Город, страна</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--            <div class="flex justify-between">-->
+<!--                <div class="grid grid-cols-2 grid-rows-3 gap-3 w-[555px]  h-[1100px] ">-->
+<!--                    &lt;!&ndash; Первая картинка (верхняя, большая, на 2 колонки) &ndash;&gt;-->
+<!--                    <div class="col-span-2">-->
+<!--                        <img src="./img/menu/menu-1.png" alt="" class="w-[555px] h-full ">-->
+<!--                    </div>-->
 
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
+<!--                    &lt;!&ndash; Вторая картинка (левая, маленькая) &ndash;&gt;-->
+<!--                    <div class="col-span-1 row-span-1">-->
+<!--                        <img src="./img/menu/menu-2.png" alt="" class="w-[332px]  h-full ">-->
+<!--                    </div>-->
 
-    <section class="py-10">
-        <div class="container text-center">
-            <h3 class="text-4xl mb-10 ">
-                Галерея
-                <span class="text-yellow-500">Блюд</span>
-            </h3>
+<!--                    &lt;!&ndash; Третья картинка (2 строки, 1 колонка) &ndash;&gt;-->
+<!--                    <div class="col-span-1 row-span-2">-->
+<!--                        <img src="./img/menu/menu-3.png" alt="" class="w-full h-full ">-->
+<!--                    </div>-->
 
+<!--                    &lt;!&ndash; Четвёртая картинка (пересекается с 3 картинкой, но стоит в третьей строке первой колонки) &ndash;&gt;-->
+<!--                    <div class="col-span-1 row-start-3">-->
+<!--                        <img src="./img/menu/menu-4.png" alt="" class="w-[332px] h-full ">-->
+<!--                    </div>-->
+<!--                </div>-->
 
-            <div class="grid grid-cols-4 grid-rows-2 gap-4">
-                <div class="col-span-2">
-                    <img src="./img/gallery/i1.png" alt="" class="w-full h-auto object-cover">
-                </div>
-                <div>
-                    <img src="./img/gallery/i2.png" alt="" class="w-full h-auto object-cover">
-                </div>
-                <div>
-                    <img src="./img/gallery/i3.png" alt="" class="w-full h-auto object-cover">
-                </div>
-                <div>
-                    <img src="./img/gallery/i4.png" alt="" class="w-full h-auto object-cover">
-                </div>
-                <div>
-                    <img src="./img/gallery/i5.png" alt="" class="w-full h-auto object-cover">
-                </div>
-                <div class="col-span-2">
-                    <img src="./img/gallery/i6.png" alt="" class="w-full h-auto object-cover">
-                </div>
-            </div>
+<!--                <div class="flex flex-col gap-y-18">-->
+<!--                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">-->
+<!--                        &lt;!&ndash; Изображение блюда &ndash;&gt;-->
+<!--                        <div class="w-40 h-40 rounded-full overflow-hidden">-->
+<!--                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">-->
+<!--                        </div>-->
 
-        </div>
+<!--                        &lt;!&ndash; Контент (название и описание) &ndash;&gt;-->
+<!--                        <div class="ml-4  flex-1 pr-5">-->
+<!--                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>-->
+<!--                            <p class="text-md text-gray-300">-->
+<!--                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами-->
+<!--                            </p>-->
+<!--                        </div>-->
 
-    </section>
+<!--                        &lt;!&ndash; Цена &ndash;&gt;-->
+<!--                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">-->
+<!--                            3500-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">-->
+<!--                        &lt;!&ndash; Изображение блюда &ndash;&gt;-->
+<!--                        <div class="w-40 h-40 rounded-full overflow-hidden">-->
+<!--                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">-->
+<!--                        </div>-->
 
-    <section class="py-20">
-        <div class="container text-center">
-            <h3 class="text-4xl mb-10 ">
-                Наши
-                <span class="text-yellow-500">Повара</span>
-            </h3>
+<!--                        &lt;!&ndash; Контент (название и описание) &ndash;&gt;-->
+<!--                        <div class="ml-4  flex-1 pr-5">-->
+<!--                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>-->
+<!--                            <p class="text-md text-gray-300">-->
+<!--                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами-->
+<!--                            </p>-->
+<!--                        </div>-->
 
-            <div class="flex justify-between">
-                <div>
-                    <img src="./img/cook/cook-1.png" alt="">
-                </div>
-                <div>
-                    <img src="./img/cook/cook-2.png" alt="">
-                </div>
-                <div>
-                    <img src="./img/cook/cook-3.png" alt="">
-                </div>
-            </div>
+<!--                        &lt;!&ndash; Цена &ndash;&gt;-->
+<!--                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">-->
+<!--                            3500-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">-->
+<!--                        &lt;!&ndash; Изображение блюда &ndash;&gt;-->
+<!--                        <div class="w-40 h-40 rounded-full overflow-hidden">-->
+<!--                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Контент (название и описание) &ndash;&gt;-->
+<!--                        <div class="ml-4  flex-1 pr-5">-->
+<!--                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>-->
+<!--                            <p class="text-md text-gray-300">-->
+<!--                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами-->
+<!--                            </p>-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Цена &ndash;&gt;-->
+<!--                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">-->
+<!--                            3500-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="flex  bg-neutral-700 text-white p-4 rounded-xl relative w-[500px]">-->
+<!--                        &lt;!&ndash; Изображение блюда &ndash;&gt;-->
+<!--                        <div class="w-40 h-40 rounded-full overflow-hidden">-->
+<!--                            <img src="./img/menu/dish-1.png" alt="Рыба с овощами" class="w-full h-full object-cover">-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Контент (название и описание) &ndash;&gt;-->
+<!--                        <div class="ml-4  flex-1 pr-5">-->
+<!--                            <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>-->
+<!--                            <p class="text-md text-gray-300">-->
+<!--                                Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами-->
+<!--                            </p>-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Цена &ndash;&gt;-->
+<!--                        <div class="absolute top-5 left-28 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">-->
+<!--                            3500-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="text-center">-->
+<!--                        <a href="#"-->
+<!--                           class="text-white bg-yellow-500 px-4 py-2 rounded-2xl uppercase font-semibold hover:bg-yellow-700 ">Заказ-->
+<!--                            столик</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--        </div>-->
+<!--    </section>-->
 
 
-        </div>
+<!--    <section class="relative bg-[url('../img/bg-slider.png')] bg-cover bg-bottom bg-no-repeat] ">-->
+<!--        <div class="absolute inset-0 bg-black opacity-70"></div>-->
+<!--        <div class="w-full relative">-->
+<!--            <div class="swiper default-carousel swiper-container">-->
+<!--                <div class="swiper-wrapper">-->
+<!--                    &lt;!&ndash; Slide 1 &ndash;&gt;-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class=" h-96 flex justify-center items-center text-white">-->
+<!--                            <div class="text-center px-4">-->
+<!--                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">-->
+<!--                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание-->
+<!--                                    отличное,-->
+<!--                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома-->
+<!--                                    в Мексике-->
+<!--                                    я не встречал таких отменных заведений, однозначно рекомендую.-->
+<!--                                </p>-->
+<!--                                <div class="flex flex-col items-center ">-->
+<!--                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">-->
+<!--                                    <div>-->
+<!--                                        <p class="text-xl font-semibold">Имя пользователя</p>-->
+<!--                                        <p class="text-md text-gray-400">Город, страна</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
-    </section>
+<!--                    &lt;!&ndash; Slide 2 &ndash;&gt;-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class=" h-96 flex justify-center items-center text-white">-->
+<!--                            <div class="text-center px-4 ">-->
+<!--                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">-->
+<!--                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание-->
+<!--                                    отличное,-->
+<!--                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома-->
+<!--                                    в Мексике-->
+<!--                                    я не встречал таких отменных заведений, однозначно рекомендую.-->
+<!--                                </p>-->
+<!--                                <div class="flex flex-col items-center ">-->
+<!--                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">-->
+<!--                                    <div>-->
+<!--                                        <p class="text-xl font-semibold">Имя пользователя</p>-->
+<!--                                        <p class="text-md text-gray-400">Город, страна</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Slide 3 &ndash;&gt;-->
+<!--                    <div class="swiper-slide">-->
+<!--                        <div class=" h-96 flex justify-center items-center text-white">-->
+<!--                            <div class="text-center px-4">-->
+<!--                                <p class="text-lg font-semibold mb-4 mx-auto w-[700px] italic">-->
+<!--                                    Вид из ресторана потрясающий, интерьер необычный, еда отличная, обслуживание-->
+<!--                                    отличное,-->
+<!--                                    понравились закуски и десерт, утка с картошкой была восхитительна, все отлично дома-->
+<!--                                    в Мексике-->
+<!--                                    я не встречал таких отменных заведений, однозначно рекомендую.-->
+<!--                                </p>-->
+<!--                                <div class="flex flex-col items-center ">-->
+<!--                                    <img class="w-16 h-16 rounded-full mr-4 " src="./img/user-1.png" alt="User Avatar">-->
+<!--                                    <div>-->
+<!--                                        <p class="text-xl font-semibold">Имя пользователя</p>-->
+<!--                                        <p class="text-md text-gray-400">Город, страна</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
 
-    <section class="bg-[url('../img/bg-end.png')] bg-cover bg-center bg-no-repeat] h-screen "></section>
+<!--                <div class="swiper-pagination"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
 
-    <footer class="py-10">
-        <div class="container flex justify-between">
-            <div class="">
-                <div class="mb-10">
-                    <a href="" ><span class="text-2xl text-yellow-500">Coffee -&- Home</span></a>
-                    <p class="w-120 mt-5">Наш ресторан ждет вас, обслуживание и еда на самом высоком уровне, потому что вы этого заслуживаете</p>
-                </div>
-
-                <div>
-                    <h4 class="mb-2">Время работы</h4>
-
-                    <div class="flex gap-x-15 ">
-                        <div>
-                            <p>
-                                Пн - Пт
-                            </p>
-                            <p>с 8:00 до 23:00
-                            </p>
-
-                        </div>
-                        <div>
-                            <p>
-                                Сб - Вс
-
-                            </p>
-                            <p>
-                                c 10:00 до 02:00
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="flex gap-x-20 ">
-                <div>
-                    <h4 class="uppercase mb-4">Навигация</h4>
-                    <nav>
-                        <ul class="flex flex-col gap-3">
-                            <li><a href="#">Меню</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Галерея</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div>
-                    <h4 class="uppercase mb-4">Блюда</h4>
-                    <nav>
-                        <ul class="flex flex-col gap-3">
-                            <li><a href="#">Рыба с овощами</a></li>
-                            <li><a href="#">Чили с тофу</a></li>
-                            <li><a href="#">Яичница с огурцом</a></li>
-                            <li><a href="#">Остальные блюда</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="container text-center mt-5">
-            <hr class="w- h-1 text-yellow-500 py-2">
-            <p> &copy 2025 Кафе. Все права защищены. </p>
-        </div>
-    </footer>
+<!--    <section class="py-10">-->
+<!--        <div class="container text-center">-->
+<!--            <h3 class="text-4xl mb-10 ">-->
+<!--                Галерея-->
+<!--                <span class="text-yellow-500">Блюд</span>-->
+<!--            </h3>-->
 
 
+<!--            <div class="grid grid-cols-4 grid-rows-2 gap-4">-->
+<!--                <div class="col-span-2">-->
+<!--                    <img src="./img/gallery/i1.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/gallery/i2.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/gallery/i3.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/gallery/i4.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/gallery/i5.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--                <div class="col-span-2">-->
+<!--                    <img src="./img/gallery/i6.png" alt="" class="w-full h-auto object-cover">-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </section>-->
+
+<!--    <section class="py-20">-->
+<!--        <div class="container text-center">-->
+<!--            <h3 class="text-4xl mb-10 ">-->
+<!--                Наши-->
+<!--                <span class="text-yellow-500">Повара</span>-->
+<!--            </h3>-->
+
+<!--            <div class="flex justify-between">-->
+<!--                <div>-->
+<!--                    <img src="./img/cook/cook-1.png" alt="">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/cook/cook-2.png" alt="">-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <img src="./img/cook/cook-3.png" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+<!--        </div>-->
+
+<!--    </section>-->
+
+<!--    <section class="bg-[url('../img/bg-end.png')] bg-cover bg-center bg-no-repeat] h-screen "></section>-->
 </main>
+<!--    <footer class="py-10">-->
+<!--        <div class="container flex justify-between">-->
+<!--            <div class="">-->
+<!--                <div class="mb-10">-->
+<!--                    <a href=""><span class="text-2xl text-yellow-500">Coffee -&- Home</span></a>-->
+<!--                    <p class="w-120 mt-5">Наш ресторан ждет вас, обслуживание и еда на самом высоком уровне, потому что-->
+<!--                        вы этого заслуживаете</p>-->
+<!--                </div>-->
+
+<!--                <div>-->
+<!--                    <h4 class="mb-2">Время работы</h4>-->
+
+<!--                    <div class="flex gap-x-15 ">-->
+<!--                        <div>-->
+<!--                            <p>-->
+<!--                                Пн - Пт-->
+<!--                            </p>-->
+<!--                            <p>с 8:00 до 23:00-->
+<!--                            </p>-->
+
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p>-->
+<!--                                Сб - Вс-->
+
+<!--                            </p>-->
+<!--                            <p>-->
+<!--                                c 10:00 до 02:00-->
+<!--                            </p>-->
+
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+<!--            <div class="flex gap-x-20 ">-->
+<!--                <div>-->
+<!--                    <h4 class="uppercase mb-4">Навигация</h4>-->
+<!--                    <nav>-->
+<!--                        <ul class="flex flex-col gap-3">-->
+<!--                            <li><a href="#">Меню</a></li>-->
+<!--                            <li><a href="#">О нас</a></li>-->
+<!--                            <li><a href="#">Контакты</a></li>-->
+<!--                            <li><a href="#">Галерея</a></li>-->
+<!--                        </ul>-->
+<!--                    </nav>-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <h4 class="uppercase mb-4">Блюда</h4>-->
+<!--                    <nav>-->
+<!--                        <ul class="flex flex-col gap-3">-->
+<!--                            <li><a href="#">Рыба с овощами</a></li>-->
+<!--                            <li><a href="#">Чили с тофу</a></li>-->
+<!--                            <li><a href="#">Яичница с огурцом</a></li>-->
+<!--                            <li><a href="#">Остальные блюда</a></li>-->
+<!--                        </ul>-->
+<!--                    </nav>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="container text-center mt-5">-->
+<!--            <hr class="w- h-1 text-yellow-500 py-2">-->
+<!--            <p> &copy 2025 Кафе. Все права защищены. </p>-->
+<!--        </div>-->
+<!--    </footer>-->
+
+
 </body>
 </html>
