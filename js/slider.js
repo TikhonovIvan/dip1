@@ -11,13 +11,10 @@ let swiper = new Swiper(".default-carousel", {
 });
 
 
-import forms from '@tailwindcss/forms';
-
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-    theme: {
-        extend: {},
-    },
-    plugins: [forms],
-};
+// import forms from '@tailwindcss/forms';
+//
+// /** @type {import('tailwindcss').Config} */
+// export default {
+//     content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+//     plugins: [forms],
+// };

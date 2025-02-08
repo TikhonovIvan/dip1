@@ -580,11 +580,17 @@
   .z-1 {
     z-index: 1;
   }
+  .z-3 {
+    z-index: 3;
+  }
   .z-10 {
     z-index: 10;
   }
   .z-20 {
     z-index: 20;
+  }
+  .z-30 {
+    z-index: 30;
   }
   .z-50 {
     z-index: 50;
@@ -630,6 +636,9 @@
   }
   .-mt-50 {
     margin-top: calc(var(--spacing) * -50);
+  }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -713,6 +722,9 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
@@ -727,6 +739,12 @@
   }
   .h-screen {
     height: 100vh;
+  }
+  .min-h-32 {
+    min-height: calc(var(--spacing) * 32);
+  }
+  .min-h-42 {
+    min-height: calc(var(--spacing) * 42);
   }
   .w-1 {
     width: calc(var(--spacing) * 1);
@@ -749,8 +767,29 @@
   .w-\[555px\] {
     width: 555px;
   }
+  .w-auto {
+    width: auto;
+  }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .w-svw {
+    width: 100svw;
+  }
+  .max-w-100 {
+    max-width: calc(var(--spacing) * 100);
+  }
+  .max-w-200 {
+    max-width: calc(var(--spacing) * 200);
+  }
+  .max-w-\[00px\] {
+    max-width: 00px;
   }
   .max-w-\[350px\] {
     max-width: 350px;
@@ -758,8 +797,26 @@
   .max-w-\[450px\] {
     max-width: 450px;
   }
+  .max-w-\[550px\] {
+    max-width: 550px;
+  }
+  .max-w-\[700\] {
+    max-width: 700;
+  }
   .max-w-\[700px\] {
     max-width: 700px;
+  }
+  .max-w-full {
+    max-width: 100%;
+  }
+  .min-w-\[350px\] {
+    min-width: 350px;
+  }
+  .min-w-\[500px\] {
+    min-width: 500px;
+  }
+  .min-w-\[700px\] {
+    min-width: 700px;
   }
   .flex-1 {
     flex: 1;
@@ -805,6 +862,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
   }
   .justify-between {
     justify-content: space-between;
@@ -952,6 +1012,12 @@
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
   .px-15 {
     padding-inline: calc(var(--spacing) * 15);
   }
@@ -964,14 +1030,29 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
+  .py-15 {
+    padding-block: calc(var(--spacing) * 15);
+  }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+  .pt-15 {
+    padding-top: calc(var(--spacing) * 15);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -1338,6 +1419,16 @@
   .sm\:py-20 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 20);
+    }
+  }
+  .sm\:pt-0 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:pt-5 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 5);
     }
   }
   .sm\:text-start {
