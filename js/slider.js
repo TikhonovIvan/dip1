@@ -32,3 +32,19 @@ document.querySelectorAll('.custom-arrows').forEach(arrowContainer => {
         }
     });
 });
+
+
+const buttons = document.querySelectorAll('.time-button');
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Удалить класс 'bg-yellow-500' и 'text-black' у всех кнопок
+        buttons.forEach(btn => {
+            btn.classList.remove('bg-yellow-500', 'text-black');
+            btn.classList.add('hover:bg-yellow-500', 'hover:text-black'); // вернуть hover-эффекты
+        });
+
+        // Добавить выделение к нажатой кнопке
+        button.classList.add('bg-yellow-500', 'text-black');
+    });
+});
