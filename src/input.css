@@ -15,4 +15,47 @@
         padding-left: 2rem; /* Внутренние отступы */
         padding-right: 2rem;
     }
+
+}
+
+@layer components {
+    .custom-number-input {
+        -moz-appearance: textfield; /* Убираем стрелки в Firefox */
+    }
+
+    .custom-number-input::-webkit-inner-spin-button,
+    .custom-number-input::-webkit-outer-spin-button {
+        -webkit-appearance: none; /* Убираем стрелки в Chrome и Safari */
+        margin: 0;
+    }
+
+    .custom-arrows {
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .custom-arrows::before,
+    .custom-arrows::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px;
+        border-color: transparent;
+        cursor: pointer;
+    }
+
+    .custom-arrows::before {
+        border-bottom-color: #eab308; /* Верхняя стрелка */
+    }
+
+    .custom-arrows::after {
+        border-top-color: #eab308; /* Нижняя стрелка */
+    }
 }
