@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/menu.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-neutral-800  text-white font-family">
+<header class="bg-neutral-800 fixed top-0 inset-x-0 z-10 sm:static">
+    <div class="flex px-5 items-center justify-between text-yellow-500 py-3 sм:py-6">
+        <a href="index.html"><span class="text-xl sm:text-2xl ">Coffee -&- Home</span></a>
+        <nav class="hidden lg:block">
+            <ul class="flex items-center gap-x-4 lg:gap-x-8 uppercase  ">
+                <li><a href="#menu" class="font-bold hover:text-yellow-50">Меню</a></li>
+                <li><a href="#about" class="font-bold hover:text-yellow-50">О нас</a></li>
+                <li><a href="#gelari" class="font-bold hover:text-yellow-50">Галерея</a></li>
+                <li><a href="#footer" class="font-bold hover:text-yellow-50">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="items-center gap-x-6  hidden sm:flex ">
+            <a href="reservation.html" class="text-yellow-50 uppercase text-xs md:text-base font-semibold px-2 py-2 md:px-3 md:py-2 border
+            border-yellow-500 rounded-3xl bg-yellow-500 hover:bg-yellow-400 hover:border-yellow-400  ">Заказать
+                столик</a>
+            <a href="login.html" class="uppercase font-semibold text-xs md:text-base px-3 md:px-5 py-2 border
+            border-yellow-500 rounded-3xl hover:bg-amber-400 hover:text-white">Кабинет</a>
+        </div>
+
+        <!--Иконка меню-->
+        <div class="flex lg:hidden ">
+            <nav id="nav"
+                 class="absolute inset-x-0 bg-neutral-700 top-13 sm:top-14  border-b-1 hidden target:block peer z-10">
+                <ul class="flex flex-col items-center gap-y-2 px-3 py-2">
+                    <li class="w-full">
+                        <a href="#menu" class="w-full inline-block font-bold text-center">Меню</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#about" class="w-full inline-block font-bold text-center">О нас</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#gelari" class="w-full inline-block font-bold text-center">Галерея</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="#footer" class="w-full inline-block font-bold text-center">Контакты</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="reservation.html" class=" w-full inline-block text-yellow-50 uppercase text-center text-xs  font-semibold px-2 py-2 border
+                                        border-yellow-500 rounded-3xl bg-yellow-500   ">Заказать
+                            столик</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="/login.html" class="w-full inline-block uppercase text-center font-semibold text-xs py-2 border
+                            border-yellow-500 rounded-3xl">Кабинет</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!--Кнопка открыть меню -->
+            <a href="#nav" class="peer-target:hidden peer-target:[&+a]:block">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                          d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+            <!--Кнопка закрыть меню -->
+            <a href="" class="hidden ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd"
+                          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </a>
+
+
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="menu"
+             class="pt-10 pb-30 font-[Tinos] bg-[url('../img/menu/menu-bg.png')] bg-scroll center bg-no-repeat] ">
+        <div class="container flex flex-col justify-center items-center gap-5 ">
+            <h2 class=" text-4xl text-yellow-500 text-center">Меню</h2>
+
+
+            <div class="flex justify-center border-t border-b border-yellow-500 w-full mb-5">
+                <nav class="py-4">
+                    <ul class="flex items-center gap-x-12 text-xl">
+                        <li>
+                            <a href="#" data-category="all" class="category-link">Все</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="first" class="category-link">Первое блюдо</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="second" class="category-link">Второе блюдо</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="breakfast" class="category-link">На завтрак</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="desserts" class="category-link">Десерты</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="tea" class="category-link">Чай</a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="juices" class="category-link">Соки</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="grid grid-cols-3 gap-8" id="cards-container">
+                <!-- Пример карточки -->
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-start
+                bg-neutral-700 text-white p-4 rounded-xl relative transition-transform duration-300 hover:-translate-y-3"
+                     data-category="first">
+                    <!-- Изображение и контент -->
+                    <div class="w-40 h-40 rounded-full overflow-hidden">
+                        <img src="./img/menu/dish-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-1 pr-5">
+                        <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
+                        <p class="text-md text-gray-300">
+                            Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
+                        </p>
+                    </div>
+                    <div class="absolute top-5 xs-left-10 sm:left-30 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
+                        3500
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-start
+                bg-neutral-700 text-white p-4 rounded-xl relative transition-transform duration-300 hover:-translate-y-3"
+                     data-category="desserts">
+                    <!-- Изображение и контент -->
+                    <div class="w-40 h-40 rounded-full overflow-hidden">
+                        <img src="./img/menu/dish-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-1 pr-5">
+                        <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
+                        <p class="text-md text-gray-300">
+                            Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
+                        </p>
+                    </div>
+                    <div class="absolute top-5 xs-left-10 sm:left-30 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
+                        3500
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-start bg-neutral-700 text-white p-4 rounded-xl relative transition-transform duration-300 hover:-translate-y-3" data-category="first">
+                    <!-- Изображение и контент -->
+                    <div class="w-40 h-40 rounded-full overflow-hidden">
+                        <img src="./img/menu/dish-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-1 pr-5">
+                        <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
+                        <p class="text-md text-gray-300">
+                            Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
+                        </p>
+                    </div>
+                    <div class="absolute top-5 xs-left-10 sm:left-30 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
+                        3500
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center text-center sm:text-start bg-neutral-700 text-white p-4 rounded-xl relative transition-transform duration-300 hover:-translate-y-3" data-category="first">
+                    <!-- Изображение и контент -->
+                    <div class="w-40 h-40 rounded-full overflow-hidden">
+                        <img src="./img/menu/dish-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-1 pr-5">
+                        <h3 class="mt-2 mb-3 text-yellow-500 text-xl font-semibold">Лумпия с соусом</h3>
+                        <p class="text-md text-gray-300">
+                            Начинка из свиного фарша, обжаренного с луком, морковью и другими овощами
+                        </p>
+                    </div>
+                    <div class="absolute top-5 xs-left-10 sm:left-30 bg-black text-white text-sm font-bold px-4 py-1 rounded-full">
+                        3500
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+</main>
+<footer id="footer" class="py-10">
+    <div class="container flex flex-col sm:flex-row justify-center sm:justify-between gap-y-5 text-center items-center sm:text-start sm:items-center ">
+        <div class="">
+            <div class="mb-10">
+                <a href=""><span class="text-2xl text-yellow-500">Coffee -&- Home</span></a>
+                <p class="sm:w-90 md:w-120 mt-5">Наш ресторан ждет вас, обслуживание и еда на самом высоком уровне,
+                    потому что
+                    вы этого заслуживаете</p>
+            </div>
+
+            <div>
+                <h4 class="mb-2">Время работы</h4>
+
+                <div class="flex gap-x-15 justify-center sm:justify-start ">
+                    <div>
+                        <p>
+                            Пн - Пт
+                        </p>
+                        <p>с 8:00 до 23:00
+                        </p>
+
+                    </div>
+                    <div>
+                        <p>
+                            Сб - Вс
+
+                        </p>
+                        <p>
+                            c 10:00 до 02:00
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex gap-x-10 sm:gap-x-2 md:gap-x-5  ">
+            <div>
+                <h4 class="uppercase mb-4">Навигация</h4>
+                <nav>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Галерея</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <h4 class="uppercase mb-4">Блюда</h4>
+                <nav>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="#">Рыба с овощами</a></li>
+                        <li><a href="#">Чили с тофу</a></li>
+                        <li><a href="#">Яичница с огурцом</a></li>
+                        <li><a href="#">Остальные блюда</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container text-center mt-5">
+        <hr class="w- h-1 text-yellow-500 py-2">
+        <p> &copy 2025 Кафе. Все права защищены. </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
