@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="./css/slider.css">
-    <script src="./js/slider.js" defer></script>
+
     <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
@@ -128,8 +128,13 @@
                         <!-- Локация -->
                         <div>
                             <label class="block mb-1">Локация</label>
-                            <input type="text" placeholder="Укажите адрес кафе"
-                                   class="w-full border border-yellow-500 rounded-lg p-3 bg-transparent text-white">
+                            <select name="city" id="city-select" class="w-full border border-yellow-500 rounded-lg p-3  ">
+                                <option class="text-black bg-yellow-500" >-- Выберите локацию --</option>
+                                <option value="" class="text-black bg-yellow-500">ул. Чуй 231</option>
+                                <option value="" class="text-black bg-yellow-500">ул. Самара 12</option>
+                                <option value="" class="text-black bg-yellow-500">ул. Чуй 11</option>
+                            </select>
+
                         </div>
                         <!-- Количество персон и Номер столика -->
                         <div class="grid grid-cols-2 gap-4">

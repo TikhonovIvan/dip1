@@ -734,11 +734,23 @@
   .w-\[555px\] {
     width: 555px;
   }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-3xl {
     max-width: var(--container-3xl);
+  }
+  .max-w-\[500px\] {
+    max-width: 500px;
+  }
+  .max-w-\[50px\] {
+    max-width: 50px;
   }
   .max-w-\[350px\] {
     max-width: 350px;
@@ -746,8 +758,29 @@
   .max-w-\[450px\] {
     max-width: 450px;
   }
+  .max-w-\[550px\] {
+    max-width: 550px;
+  }
+  .max-w-\[650px\] {
+    max-width: 650px;
+  }
   .max-w-\[700px\] {
     max-width: 700px;
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .min-w-\[350px\] {
+    min-width: 350px;
+  }
+  .min-w-\[500px\] {
+    min-width: 500px;
+  }
+  .min-w-\[550px\] {
+    min-width: 550px;
   }
   .flex-1 {
     flex: 1;
@@ -793,11 +826,17 @@
   .items-start {
     align-items: flex-start;
   }
+  .justify-around {
+    justify-content: space-around;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
+  }
+  .justify-evenly {
+    justify-content: space-evenly;
   }
   .justify-start {
     justify-content: flex-start;
@@ -853,14 +892,8 @@
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
   }
-  .gap-y-10 {
-    row-gap: calc(var(--spacing) * 10);
-  }
   .gap-y-18 {
     row-gap: calc(var(--spacing) * 18);
-  }
-  .gap-y-20 {
-    row-gap: calc(var(--spacing) * 20);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -902,23 +935,11 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
-  .border-amber-500 {
-    border-color: var(--color-amber-500);
-  }
-  .border-yellow-400 {
-    border-color: var(--color-yellow-400);
-  }
   .border-yellow-500 {
     border-color: var(--color-yellow-500);
   }
-  .border-b-yellow-400 {
-    border-bottom-color: var(--color-yellow-400);
-  }
   .bg-black {
     background-color: var(--color-black);
-  }
-  .bg-green-600 {
-    background-color: var(--color-green-600);
   }
   .bg-neutral-700 {
     background-color: var(--color-neutral-700);
@@ -1046,6 +1067,9 @@
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
   }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
   .pb-28 {
     padding-bottom: calc(var(--spacing) * 28);
   }
@@ -1116,26 +1140,11 @@
   .text-gray-400 {
     color: var(--color-gray-400);
   }
-  .text-green-300 {
-    color: var(--color-green-300);
-  }
-  .text-green-400 {
-    color: var(--color-green-400);
-  }
   .text-green-500 {
     color: var(--color-green-500);
   }
-  .text-green-600 {
-    color: var(--color-green-600);
-  }
-  .text-green-700 {
-    color: var(--color-green-700);
-  }
   .text-red-600 {
     color: var(--color-red-600);
-  }
-  .text-sky-500 {
-    color: var(--color-sky-500);
   }
   .text-white {
     color: var(--color-white);
@@ -1412,11 +1421,6 @@
       justify-content: space-between;
     }
   }
-  .sm\:justify-center {
-    @media (width >= 40rem) {
-      justify-content: center;
-    }
-  }
   .sm\:justify-start {
     @media (width >= 40rem) {
       justify-content: flex-start;
@@ -1644,16 +1648,6 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
-    }
-  }
-  .lg\:justify-around {
-    @media (width >= 64rem) {
-      justify-content: space-around;
-    }
-  }
-  .lg\:justify-between {
-    @media (width >= 64rem) {
-      justify-content: space-between;
     }
   }
   .lg\:gap-x-8 {
